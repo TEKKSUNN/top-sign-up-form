@@ -93,11 +93,17 @@ ul {
     justify-content: space-between;
 }
 
+.side.input-left,
+.side.input-right {
+    width: 45%;
+}
+
 li.sign-up {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 8px;
+    width: 100%;
 }
 
 li.sign-up label {

@@ -143,3 +143,12 @@ li.sign-up input {
     padding: 0.75rem 1.5rem;
     -webkit-box-shadow: 5px 5px 10px -10px black; 
 }
+
+.side.right > p {
+    font-size: 16px;
+}
+
+.side.right > p > a {
+    color: #596D48;
+    text-decoration: none;
+}

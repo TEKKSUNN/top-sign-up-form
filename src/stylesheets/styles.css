@@ -33,7 +33,7 @@ main {
     background-color: whitesmoke;
 }
 
-.side {
+main > .side {
     box-sizing: border-box;
 }
 

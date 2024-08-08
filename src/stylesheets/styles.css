@@ -63,3 +63,16 @@ main {
 .left p > a {
     color: white;
 }
+
+.right article {
+    width: 75%;
+}
+
+article p {
+    font-size: 1.35rem;
+    font-weight: 600;
+}
+
+.italic {
+    font-style: italic;
+}

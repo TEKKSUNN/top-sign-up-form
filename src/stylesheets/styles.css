@@ -11,6 +11,8 @@ main {
     flex-direction: column;
     justify-content: space-between;
     width: 35%;
+    background-image: url("../images/background.jpg");
+    background-size: 100%;
 }
 
 .side.right {
@@ -34,4 +36,5 @@ main {
 
 #logo-title {
     font: 5rem 'norsebold';
+    color: white;
 }

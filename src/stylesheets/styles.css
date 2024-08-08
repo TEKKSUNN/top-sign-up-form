@@ -6,7 +6,18 @@ main {
     width: auto;
 }
 
+.side.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 35%;
+}
 
+.side.right {
+    display: flex;
+    flex-direction: column;
+    padding: 10% 0;
+}
 
 #logo-title {
     font: 5rem 'norsebold';

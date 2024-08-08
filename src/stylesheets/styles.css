@@ -19,6 +19,14 @@ main {
     padding: 10% 0;
 }
 
+.header-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 25%);
+    margin-top: 15%;
+}
+
 #logo-title {
     font: 5rem 'norsebold';
 }

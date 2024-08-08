@@ -30,6 +30,7 @@ main {
     flex-direction: column;
     justify-content: center;
     flex: 2.5;
+    background-color: whitesmoke;
 }
 
 .side {

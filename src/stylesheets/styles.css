@@ -1,1 +1,5 @@
-@import url("../fonts/norse-bold/stylesheet.css")
+@import url("../fonts/norse-bold/stylesheet.css");
+
+#logo-title {
+    font: 5rem 'norsebold';
+}

@@ -2,7 +2,11 @@
 
 main {
     display: flex;
+    height: 100vh;
+    width: auto;
 }
+
+
 
 #logo-title {
     font: 5rem 'norsebold';

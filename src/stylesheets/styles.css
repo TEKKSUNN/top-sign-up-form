@@ -27,6 +27,11 @@ main {
     margin-top: 15%;
 }
 
+#logo-img {
+    height: 108px;
+    width: auto;
+}
+
 #logo-title {
     font: 5rem 'norsebold';
 }

@@ -1,5 +1,9 @@
 @import url("../fonts/norse-bold/stylesheet.css");
 
+main {
+    display: flex;
+}
+
 #logo-title {
     font: 5rem 'norsebold';
 }

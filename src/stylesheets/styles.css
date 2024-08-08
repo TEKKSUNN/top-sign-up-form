@@ -35,6 +35,7 @@ main {
 
 .side.right > * {
     padding: 0 2.5%;
+    margin-bottom: 24px;
 }
 
 main > .side {
@@ -95,4 +96,16 @@ li.sign-up {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+}
+
+.side.right form {
+    padding: 0;
+}
+
+.side.right form button {
+    margin: 0 2.5%;
+}
+
+.sign-up.block {
+    background-color: white;
 }

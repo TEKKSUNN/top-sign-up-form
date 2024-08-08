@@ -107,7 +107,7 @@ li.sign-up label {
 }
 
 li.sign-up input {
-    border: 1px solid black;
+    border: 1px solid #E5E7EB;
     border-radius: 4px;
     padding: 8px;
 }

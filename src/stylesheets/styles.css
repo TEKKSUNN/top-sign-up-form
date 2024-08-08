@@ -19,7 +19,7 @@ main {
 .side.right {
     display: flex;
     flex-direction: column;
-    padding: 10% 0;
+    justify-content: center;
 }
 
 .header-block {

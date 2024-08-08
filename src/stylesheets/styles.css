@@ -33,6 +33,10 @@ main {
     background-color: whitesmoke;
 }
 
+.side.right > * {
+    padding: 0 2.5%;
+}
+
 main > .side {
     box-sizing: border-box;
 }

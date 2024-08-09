@@ -47,7 +47,7 @@ main > .side {
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 50%);
-    margin-top: 25%;
+    margin-top: 35%;
     padding: 4px 0;
     align-self: stretch;
 }

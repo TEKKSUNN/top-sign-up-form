@@ -40,6 +40,26 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
                 }
             }
+            if (typeValue === "email" && targetID === "email") {
+                let valueMatch;
+                let charCount;
+                try {
+                    valueMatch = inputValue.match(/[a-z0-9!#$%&'*+/=?^_`{|}~.-]+@[a-z0-9-]+(\.[a-z0-9-]+)*/);
+                    charCount = valueMatch[0].length;
+                } catch (TypeError) {
+                    valueMatch = null;
+                    charCount = inputValue.length;
+                }
+                console.log(valueMatch);
+                if (valueMatch !== null && valueMatch.length > 0 && (charCount - inputValue.length === 0)) {
+                    inputSpan.style.opacity = 0;
+                }
+                else {
+                    inputSpan.textContent = "Invalid";
+                    inputSpan.style.color = "red";
+                    inputSpan.style.opacity = 1;
+                }
+            }
             if (inputValue.length === 0) {
                 inputSpan.textContent = "Empty";
                 inputSpan.style.color = "gray";

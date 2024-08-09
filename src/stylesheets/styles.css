@@ -171,3 +171,8 @@ input:focus {
 input:invalid:not(:empty) {
     outline: 1px solid red;
 }
+
+input + span {
+    display: block;
+    font: 10px sans-serif;
+}

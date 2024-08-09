@@ -162,3 +162,12 @@ li.sign-up input {
     color: #596D48;
     text-decoration: none;
 }
+
+input:focus {
+    border: 1px solid black;
+    box-shadow: 5px 5px 5px -5px black;
+}
+
+input:invalid {
+    border: 1px solid red;
+}

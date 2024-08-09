@@ -168,7 +168,7 @@ input:focus {
     box-shadow: 5px 5px 5px -5px black;
 }
 
-input:invalid:not(:empty) {
+input:invalid:not(:placeholder-shown) {
     outline: 1px solid red;
 }
 

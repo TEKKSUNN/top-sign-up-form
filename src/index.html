@@ -41,7 +41,7 @@
                                 <li class="sign-up list"><label for="last-name">LAST NAME</label><input type="text" class="sign-up input" aria-required="true" required
                                     pattern="([A-Z])([a-z]+)*(\s+([A-Z])([a-z]+)*)*" placeholder="Last Name"><span></span></li>
                                 <li class="sign-up list"><label for="phone-number">PHONE NUMBER</label><input type="tel" class="sign-up input" aria-required="true" required
-                                    placeholder="(+N) 123-456-7890"><span></span></li>
+                                    pattern="^[\+][(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$" placeholder="(+N) 123-456-7890"><span></span></li>
                                 <li class="sign-up list"><label for="confirm-password">CONFIRM PASSWORD</label><input type="password" class="sign-up input" aria-required="true" required
                                     minlength=8 placeholder="Confirm Password"><span></span></li>
                             </div>

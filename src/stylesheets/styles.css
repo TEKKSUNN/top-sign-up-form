@@ -164,10 +164,10 @@ li.sign-up input {
 }
 
 input:focus {
-    border: 1px solid black;
+    outline: 1px solid blue;
     box-shadow: 5px 5px 5px -5px black;
 }
 
-input:invalid {
-    border: 1px solid red;
+input:invalid:not(:empty) {
+    outline: 1px solid red;
 }

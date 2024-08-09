@@ -24,7 +24,12 @@ document.addEventListener("DOMContentLoaded", () => {
                     const vmWordOnly = inputValue.match(/([A-Z])([a-z]+)*/g);
                     let charCount = 0;
                     vmWordOnly.map((value) => charCount += value.length);
-                    let res = inputValue.match(/[ ]+/g).length - vmWordOnly.length;
+                    let res;
+                    try {
+                        res = inputValue.match(/[ ]+/g).length - vmWordOnly.length;
+                    } catch (TypeError) {
+                        res = -1;
+                    }
                     if (inputValue.length === charCount && inputValue.match(/[ ]+/g) === null || res === -1) {
                         inputSpan.style.opacity = 0;
                     }

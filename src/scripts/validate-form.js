@@ -79,6 +79,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             }
             else if (typeValue === "password" && (targetID === "password" || targetID === "confirm-password")) {
+                passwordNode = document.getElementById("password");
+                confirmPassNode = document.getElementById("confirm-password");
+                INPUT_SPANS_PASS = Array.from(document.querySelectorAll("input[type=\"password\"] + span"));
+                passwordValue = passwordNode.value;
+                confirmPassValue = confirmPassNode.value;
                 if (inputValue.length >= 8) {
                     inputSpan.style.opacity = 0;
                 }
@@ -86,24 +91,60 @@ document.addEventListener("DOMContentLoaded", () => {
                     inputSpan.textContent = "Invalid";
                     inputSpan.style.color = "red";
                     inputSpan.style.opacity = 1;
-                    if (inputValue.length === 0) {
-                        inputSpan.textContent = "Empty";
-                        inputSpan.style.color = "gray";
-                        inputSpan.style.opacity = 1;
+                    if (targetID === "password" && inputValue.length === 0 && confirmPassValue.length === 0) {
+                        console.log(1);
+                        passwordNode.style.borderColor = "#E5E7EB";
+                        confirmPassNode.style.borderColor = "#E5E7EB";
+                        passwordNode.style.outlineColor = "blue";
+                        confirmPassNode.style.outlineColor = "blue";
+                        
+                        INPUT_SPANS_PASS.map((spanElement) => {
+                            spanElement.textContent = "Empty";
+                            spanElement.style.color = "gray";
+                            spanElement.style.opacity = 1;
+                        });
+                        return;
                     }
+                    else if (targetID === "confirm-password" && inputValue.length === 0 && passwordValue.length === 0) {
+                        console.log(2);
+                        passwordNode.style.borderColor = "#E5E7EB";
+                        confirmPassNode.style.borderColor = "#E5E7EB";
+                        passwordNode.style.outlineColor = "blue";
+                        confirmPassNode.style.outlineColor = "blue";
+                        
+                        INPUT_SPANS_PASS.map((spanElement) => {
+                            spanElement.textContent = "Empty";
+                            spanElement.style.color = "gray";
+                            spanElement.style.opacity = 1;
+                        });
+                        return;
+                    }
+                    target.style.borderColor = "#E5E7EB";
+                    target.style.outlineColor = "red";
                     return;
                 }
-                passwordNode = document.getElementById("password");
-                confirmPassNode = document.getElementById("confirm-password");
-                passwordValue = passwordNode.value;
-                confirmPassValue = confirmPassNode.value;
                 if (passwordValue !== confirmPassValue) {
-                    inputSpan.textContent = "* Passwords do not match";
-                    inputSpan.style.color = "red";
-                    inputSpan.style.opacity = 1;
+                    passwordNode.style.outlineColor = "transparent";
+                    confirmPassNode.style.outlineColor = "transparent";
+                    passwordNode.style.borderColor = "red";
+                    confirmPassNode.style.borderColor = "red";
+                    INPUT_SPANS_PASS.map((spanElement) => {
+                        spanElement.textContent = "* Passwords do not match";
+                        spanElement.style.color = "red";
+                        spanElement.style.opacity = 1;
+                    })
+                    
                 }
                 else {
-                    inputSpan.style.opacity = 0;
+                    console.log(3);
+                    INPUT_SPANS_PASS.map((spanElement) => {
+                        spanElement.textContent = " ";
+                        spanElement.style.opacity = 0;
+                    });
+                    passwordNode.style.borderColor = "#E5E7EB";
+                    confirmPassNode.style.borderColor = "#E5E7EB";
+                    passwordNode.style.outlineColor = "blue";
+                    confirmPassNode.style.outlineColor = "blue";
                 }
             }
             if (inputValue.length === 0) {

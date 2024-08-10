@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
                 }
             }
-            if (typeValue === "email" && targetID === "email") {
+            else if (typeValue === "email" && targetID === "email") {
                 let valueMatch;
                 let charCount;
                 try {
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     inputSpan.style.opacity = 1;
                 }
             }
-            if (typeValue === "tel" && targetID === "phone-number") {
+            else if (typeValue === "tel" && targetID === "phone-number") {
                 let valueMatch;
                 try {
                     valueMatch = inputValue.match(/^\(?\+\d{1,3}\)?[ ]?\d{3}[ -]?\d{3}[ -]?\d{4}$/);

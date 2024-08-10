@@ -60,6 +60,24 @@ document.addEventListener("DOMContentLoaded", () => {
                     inputSpan.style.opacity = 1;
                 }
             }
+            if (typeValue === "tel" && targetID === "phone-number") {
+                let valueMatch;
+                try {
+                    valueMatch = inputValue.match(/^\(?\+\d{1,3}\)?[ ]?\d{3}[ -]?\d{3}[ -]?\d{4}$/);
+                } catch (TypeError) {
+                    valueMatch = null;
+                }
+                if (valueMatch !== null && valueMatch.length === 1) {
+                    target.style.outlineColor = "blue";
+                    inputSpan.style.opacity = 0;
+                }
+                else {
+                    target.style.outlineColor = "red";
+                    inputSpan.textContent = "Invalid";
+                    inputSpan.style.color = "red";
+                    inputSpan.style.opacity = 1;
+                }
+            }
             if (inputValue.length === 0) {
                 inputSpan.textContent = "Empty";
                 inputSpan.style.color = "gray";

@@ -93,10 +93,10 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
                     return;
                 }
-                passwordValue = document.getElementById("password").value;
-                confirmPassValue = document.getElementById("confirm-password").value;
-                console.log(passwordValue);
-                console.log(confirmPassValue);
+                passwordNode = document.getElementById("password");
+                confirmPassNode = document.getElementById("confirm-password");
+                passwordValue = passwordNode.value;
+                confirmPassValue = confirmPassNode.value;
                 if (passwordValue !== confirmPassValue) {
                     inputSpan.textContent = "* Passwords do not match";
                     inputSpan.style.color = "red";

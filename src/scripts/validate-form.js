@@ -78,6 +78,34 @@ document.addEventListener("DOMContentLoaded", () => {
                     inputSpan.style.opacity = 1;
                 }
             }
+            else if (typeValue === "password" && (targetID === "password" || targetID === "confirm-password")) {
+                if (inputValue.length >= 8) {
+                    inputSpan.style.opacity = 0;
+                }
+                else {
+                    inputSpan.textContent = "Invalid";
+                    inputSpan.style.color = "red";
+                    inputSpan.style.opacity = 1;
+                    if (inputValue.length === 0) {
+                        inputSpan.textContent = "Empty";
+                        inputSpan.style.color = "gray";
+                        inputSpan.style.opacity = 1;
+                    }
+                    return;
+                }
+                passwordValue = document.getElementById("password").value;
+                confirmPassValue = document.getElementById("confirm-password").value;
+                console.log(passwordValue);
+                console.log(confirmPassValue);
+                if (passwordValue !== confirmPassValue) {
+                    inputSpan.textContent = "* Passwords do not match";
+                    inputSpan.style.color = "red";
+                    inputSpan.style.opacity = 1;
+                }
+                else {
+                    inputSpan.style.opacity = 0;
+                }
+            }
             if (inputValue.length === 0) {
                 inputSpan.textContent = "Empty";
                 inputSpan.style.color = "gray";

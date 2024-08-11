@@ -53,12 +53,12 @@ main > .side {
 }
 
 #logo-img {
-    height: 108px;
+    height: 81px;
     width: auto;
 }
 
 #logo-title {
-    font: 5rem 'norsebold';
+    font: 3.75rem 'norsebold';
     color: white;
     padding: 0;
     margin: 0;
@@ -67,6 +67,7 @@ main > .side {
 .left p,
 .left p > a {
     color: white;
+    font-size: 13.5px;
 }
 
 .right article {
@@ -74,7 +75,7 @@ main > .side {
 }
 
 article p {
-    font-size: 1.5rem;
+    font-size: 1.125rem;
     font-weight: 600;
     text-wrap: balance;
 }
